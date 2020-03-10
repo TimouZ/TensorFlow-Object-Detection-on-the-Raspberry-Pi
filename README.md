@@ -327,9 +327,11 @@ File "C:\Aniruddhya\object_detection\object_detection\utils\label_map_util.py", 
 
 AttributeError: module 'tensorflow' has no attribute 'gfile
 ```
-just use previous version of tensorflow sudo pip3 install tensorflow==1.14.0
-
-If you experience problems when uninstalling tensor use 
+just use previous version of tensorflow 
+```
+sudo pip3 install tensorflow==1.14.0
+```
+If you experience problems when uninstalling tensorflow use 
 ```
 sudo pip3 ununstall protobuf
 ```
@@ -337,3 +339,13 @@ and then
 ```
 sudo pip3 uninstall tensorflow
 ```
+If you have problems like
+```Traceback (most recent call last):
+File "Object_detection_picamera.py", line 23, in
+import cv2
+File "/home/pi/.local/lib/python3.7/site-packages/cv2/__init__.py", line 3, in
+from .cv2 import *
+ImportError: /home/pi/.local/lib/python3.7/site-packages/cv2/cv2.cpython-37m-arm-linux-gnueabihf.so: undefined symbol: __atomic_fetch_add_8
+```
+here is the solution https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/issues/67
+
