@@ -321,11 +321,19 @@ Troubleshooting
 
 If you have errors like
 
-'''
+```
 File "C:\Aniruddhya\object_detection\object_detection\utils\label_map_util.py", line 137, in load_labelmap
     with tf.gfile.GFile(path, 'r') as fid:
 
-AttributeError: module 'tensorflow' has no attribute 'gfile'
-'''
-
+AttributeError: module 'tensorflow' has no attribute 'gfile
+```
 just use previous version of tensorflow sudo pip3 install tensorflow==1.14.0
+
+If you experience problems when uninstalling tensor use 
+```
+sudo pip3 ununstall protobuf
+```
+and then 
+```
+sudo pip3 uninstall tensorflow
+```
